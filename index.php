@@ -82,6 +82,8 @@ class WP_Query_Multisite {
 	}
 
 	function posts_request($sql, $query) {
+		
+		$sql = preg_replace('/\s+/', " ", $sql); 
 
 		if($query->get('multisite')) {
 
